@@ -1,0 +1,72 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+1 info using npm@8.1.4
+2 info using node@v17.1.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 2ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/root/SubQ/tutorials-account-balances/.npmrc Completed in 1ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:/root/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:validate Completed in 1ms
+16 timing config:load:credentials Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 10ms
+19 timing npm:load:configload Completed in 11ms
+20 timing npm:load:setTitle Completed in 0ms
+21 timing npm:load:setupLog Completed in 1ms
+22 timing config:load:flatten Completed in 4ms
+23 timing npm:load:cleanupLog Completed in 3ms
+24 timing npm:load:configScope Completed in 0ms
+25 timing npm:load:projectScope Completed in 1ms
+26 timing npm:load Completed in 21ms
+27 timing arborist:ctor Completed in 1ms
+28 timing arborist:ctor Completed in 1ms
+29 timing idealTree:init Completed in 16ms
+30 timing idealTree:userRequests Completed in 0ms
+31 silly idealTree buildDeps
+32 silly fetch manifest @polkadot/api@^5.7.1
+33 http fetch GET 200 https://registry.npmjs.org/@polkadot%2fapi 2319ms (cache revalidated)
+34 silly fetch manifest @subql/types@latest
+35 http fetch GET 200 https://registry.npmjs.org/@subql%2ftypes 1939ms (cache revalidated)
+36 silly fetch manifest @polkadot/api@^6
+37 timing idealTree Completed in 4373ms
+38 timing command:install Completed in 4400ms
+39 verbose stack Error: unable to resolve dependency tree
+39 verbose stack     at Arborist.[failPeerConflict] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1356:25)
+39 verbose stack     at Arborist.[loadPeerSet] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1322:34)
+39 verbose stack     at async Arborist.[buildDepStep] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:930:11)
+39 verbose stack     at async Arborist.buildIdealTree (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:216:7)
+39 verbose stack     at async Promise.all (index 1)
+39 verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:149:5)
+39 verbose stack     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:157:5)
+39 verbose stack     at async module.exports (/usr/lib/node_modules/npm/lib/cli.js:65:5)
+40 verbose cwd /root/SubQ/tutorials-account-balances
+41 verbose Linux 5.4.0-62-generic
+42 verbose argv "/usr/bin/node" "/usr/bin/npm" "install"
+43 verbose node v17.1.0
+44 verbose npm  v8.1.4
+45 error code ERESOLVE
+46 error ERESOLVE unable to resolve dependency tree
+47 error
+48 error While resolving: [1maccount-balance[22m@[1m1.0.0[22m
+48 error Found: [1m@polkadot/api[22m@[1m5.9.1[22m[2m[22m
+48 error [2mnode_modules/@polkadot/api[22m
+48 error   [33mdev[39m [1m@polkadot/api[22m@"[1m^5.7.1[22m" from the root project
+48 error
+48 error Could not resolve dependency:
+48 error [35mpeer[39m [1m@polkadot/api[22m@"[1m^6[22m" from [1m@subql/types[22m@[1m0.11.0[22m[2m[22m
+48 error [2mnode_modules/@subql/types[22m
+48 error   [33mdev[39m [1m@subql/types[22m@"[1mlatest[22m" from the root project
+48 error
+48 error Fix the upstream dependency conflict, or retry
+48 error this command with --force, or --legacy-peer-deps
+48 error to accept an incorrect (and potentially broken) dependency resolution.
+48 error
+48 error See /root/.npm/eresolve-report.txt for a full report.
+49 verbose exit 1

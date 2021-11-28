@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2021-11-28T00:56:26.311Z
+
+While resolving: account-balance@1.0.0
+Found: @polkadot/api@5.9.1
+node_modules/@polkadot/api
+  dev @polkadot/api@"^5.7.1" from the root project
+
+Could not resolve dependency:
+peer @polkadot/api@"^6" from @subql/types@0.11.0
+node_modules/@subql/types
+  dev @subql/types@"latest" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "@polkadot/api",
+    "version": "5.9.1",
+    "whileInstalling": {
+      "name": "account-balance",
+      "version": "1.0.0",
+      "path": "/root/SubQ/tutorials-account-balances"
+    },
+    "location": "node_modules/@polkadot/api",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "dev",
+        "name": "@polkadot/api",
+        "spec": "^5.7.1",
+        "from": {
+          "location": "/root/SubQ/tutorials-account-balances"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "dev",
+    "name": "@polkadot/api",
+    "spec": "^5.7.1",
+    "from": {
+      "location": "/root/SubQ/tutorials-account-balances"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "@polkadot/api",
+    "spec": "^6",
+    "error": "INVALID",
+    "from": {
+      "name": "@subql/types",
+      "version": "0.11.0",
+      "whileInstalling": {
+        "name": "account-balance",
+        "version": "1.0.0",
+        "path": "/root/SubQ/tutorials-account-balances"
+      },
+      "location": "node_modules/@subql/types",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "dev",
+          "name": "@subql/types",
+          "spec": "latest",
+          "from": {
+            "location": "/root/SubQ/tutorials-account-balances"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}
